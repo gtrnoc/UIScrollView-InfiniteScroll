@@ -31,9 +31,9 @@ class CollectionViewController: UICollectionViewController {
         collectionView?.infiniteScrollIndicatorMargin = 40
         
         // Add infinite scroll handler
-        collectionView?.addInfiniteScroll { [weak self] (scrollView) -> Void in
+        collectionView?.am_addInfiniteScroll { [weak self] (scrollView) -> Void in
             self?.fetchData() {
-                scrollView.finishInfiniteScroll()
+                scrollView.am_finishInfiniteScroll()
             }
         }
         

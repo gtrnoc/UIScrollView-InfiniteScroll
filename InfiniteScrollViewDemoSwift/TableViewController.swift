@@ -40,8 +40,7 @@ class TableViewController: UITableViewController {
         // Add infinite scroll handler
         tableView.addInfiniteScroll { [weak self] (tableView) -> Void in
             self?.performFetch {
-                tableView.finishInfiniteScroll()
-            }
+                tableView.am_finishInfiniteScroll()
         }
         
         // Uncomment this to provide conditionally prevent the infinite scroll from triggering
